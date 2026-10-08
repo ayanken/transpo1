@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoveX - Transportation App</title>
+</head>
+
+<body id="top">
+
+    <header>
+        <h1>Hello Welcome to</h1>
+        <img src="logo-search-grid-2x.png"
+         alt="moveX"
+         width="250"
+        height="150">
+
+        <p><em>Safe, simple, and reliable transportation.</em></p>
+
+        <nav>
+            <a href="#book">Book a Ride</a> |
+            <a href="#fleet">Our Vehicles</a> |
+            <a href="#map">Map</a> |
+            <a href="#media">Media</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+
+        <!-- BOOKING FORM -->
+        <section id="book">
+            <h2>Book a Ride</h2>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Trip Details</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname"
+                            placeholder="Enter your full name" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone"
+                            placeholder="09XXXXXXXXX" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="example@email.com">
+                    </p>
+
+                    <p>
+                        <label for="pickup">Pick-up Location:</label>
+                        <input type="text" id="pickup" name="pickup"
+                            list="places" required>
+                    </p>
+
+                    <p>
+                        <label for="dropoff">Drop-off Location:</label>
+                        <input type="text" id="dropoff" name="dropoff"
+                            list="places" required>
+                    </p>
+
+                    <datalist id="places">
+                        <option value="UB">
+                        <option value="SM">
+                        <option value="Botanical">
+                        <option value="Camp John hay">
+                    </datalist>
+
+                    <p>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </p>
+
+                    <p>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </p>
+
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <input type="number" id="passengers" name="passengers"
+                            min="1" max="10" value="1">
+                    </p>
+
+                    <p>
+                        <label for="vehicle">Vehicle Type:</label>
+                        <select id="vehicle" name="vehicle">
+                            <option value="van">Van na alanganin</option>
+                            <option value="Gang">Gang Bus</option>
+                            <option value="trike">Trike ng mayaman</option>
+                        </select>
+                    </p>
+
+                    <p>Payment Method:</p>
+
+                    <p>
+                        <input type="radio" id="cash" name="payment" value="cash" checked>
+                        <label for="cash">Cash</label>
+
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">Card</label>
+
+                        <input type="radio" id="ewallet" name="payment" value="ewallet">
+                        <label for="ewallet">E-Wallet</label>
+                    </p>
+
+                    <p>Extras:</p>
+
+                    <p>
+                        <input type="checkbox" id="luggage" name="extras" value="luggage">
+                        <label for="luggage">Extra luggage</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="childseat" name="extras" value="childseat">
+                        <label for="childseat">Child seat</label>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="wheelchair" name="extras" value="wheelchair">
+                        <label for="wheelchair">Wheelchair accessible</label>
+                    </p>
+
+                    <p>
+                        <label for="notes">Notes for the Driver:</label><br>
+                        <textarea id="notes" name="notes" rows="5" cols="40"
+                            placeholder="Enter notes for the driver"></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I agree to the
+                            <a href="#terms-info">Terms & Conditions</a>
+                        </label>
+                    </p>
+
+                    <button type="submit">Book Now</button>
+                    <button type="reset">Clear</button>
+
+                </fieldset>
+
+            </form>
+
+            <hr>
+        </section>
+
+
+        <!-- VEHICLES -->
+        <section id="fleet">
+            <h2>Our Vehicles</h2>
+
+            <figure>
+                <img src="l7b8p.jpg"
+                    alt="Trike ni mang kanor"
+                    width="400"
+                    height="250">
+                <figcaption>
+                    <strong>Trike ng mayaman</strong> - Fast and convenient for short trips.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="yWSg1.jpg"
+                    alt="Van vehicle"
+                    width="400"
+                    height="250">
+                <figcaption>
+                    <strong>Van na alanganin</strong> - Comfortable transportation for groups.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="TYV0g.jpg"
+                    alt="Shuttle Bus vehicle"
+                    width="400"
+                    height="250">
+                <figcaption>
+                    <strong>Bang Bus</strong> - Suitable for larger groups.
+                </figcaption>
+            </figure>
+
+            <small>You may replace the placeholder images with real vehicle photos.</small>
+
+            <hr>
+        </section>
+
+
+        <!-- MAP -->
+        <section id="map">
+            <h2>Find Our Stops</h2>
+
+            <p>Find MoveX stops around Baguio City using the map below.</p>
+
+            <iframe
+                title="OpenStreetMap Baguio City"
+                width="600"
+                height="400"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.575%2C16.395%2C120.610%2C16.425&layer=mapnik&marker=16.402%2C120.596">
+            </iframe>
+
+            <p>
+                <a href="https://www.osirisai.live/?layers=maritime,satellites,cctv,cctv_previews,live_news,earthquakes,global_incidents,day_night,cables,sdk_sea,sdk_air,sdk_naval"
+                    target="_blank" rel="noopener">
+                    View larger map
+                </a>
+            </p>
+
+
+            <h3>Image Map: Route Overview</h3>
+
+            <img src="ytKKt.jpg"
+                alt="Route showing Terminal, City Hall and Airport"
+                width="600"
+                height="200"
+                usemap="#routemap">
+
+            <map name="routemap">
+                <area shape="rect" coords="0,0,200,200"
+                    href="#schedule" alt="Terminal">
+                <area shape="rect" coords="200,0,400,200"
+                    href="#schedule" alt="City Hall">
+                <area shape="rect" coords="400,0,600,200"
+                    href="#schedule" alt="Airport">
+            </map>
+
+            <hr>
+        </section>
+
+
+        <!-- MEDIA -->
+        <section id="media">
+            <h2>Media</h2>
+
+            <h3>How MoveX Works (Video)</h3>
+
+            <video width="480" controls
+                poster="moveX.gif">
+
+                <source src="moveX.gif" type="video/mp4">
+                <source src="moveX.ogg" type="video/ogg">
+
+                Your browser does not support video.
+            </video>
+
+            <h3>Driver Announcement (Audio)</h3>
+
+            <audio controls>
+                <source src="YAH.mp3" type="audio/mpeg">
+                <source src="announcement.ogg" type="audio/ogg">
+
+                Your browser does not support audio.
+            </audio>
+
+            <h3>Watch on YouTube (Embedded)</h3>
+
+            <iframe
+                width="560"
+                height="315"
+                src="movex_transpo_promo (1).mp4"
+                title="MoveX Transportation Video"
+                allowfullscreen>
+            </iframe>
+
+            <hr>
+        </section>
+
+
+        <!-- SCHEDULE -->
+        <section id="schedule">
+            <h2>Shuttle Schedule</h2>
+
+            <table border="1" cellpadding="6" cellspacing="0">
+
+                <caption>Daily departures from Central Terminal</caption>
+
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Sm</td>
+                        <td>8:00 AM</td>
+                        <td>8:20 AM</td>
+                        <td>$100</td>
+                    </tr>
+
+                    <tr>
+                        <td>botanical</td>
+                        <td>9:00 AM</td>
+                        <td>9:30 AM</td>
+                        <td>$150</td>
+                    </tr>
+
+                    <tr>
+                        <td>camp john hay</td>
+                        <td>10:00 AM</td>
+                        <td>10:40 AM</td>
+                        <td>$200</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB</td>
+                        <td>11:00 AM</td>
+                        <td>11:20 AM</td>
+                        <td>$50</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <h3>Check Your Route</h3>
+
+            <form method="get">
+
+                <p>
+                    <label for="route">Select Route:</label>
+
+                    <select id="route" name="route">
+                        <option value="UB">UB</option>
+                        <option value="camp john hay">camp john hay</option>
+                        <option value="botanical">botanical</option>
+                        <option value="SM">SM</option>
+                    </select>
+
+                    <button type="submit">Search</button>
+                </p>
+
+            </form>
+
+            <hr>
+        </section>
+
+
+        <!-- CONTACT AND FEEDBACK -->
+        <section id="contact">
+            <h2>Contact & Feedback</h2>
+
+            <form action="#" method="post" enctype="multipart/form-data">
+
+                <fieldset>
+                    <legend>Send Feedback</legend>
+
+                    <p>
+                        <label for="feedbackname">Your Name:</label>
+                        <input type="text" id="feedbackname"
+                            name="feedbackname" required>
+                    </p>
+
+                    <p>
+                        <label for="rating">Rate Your Ride (1-5):</label>
+                        <input type="range" id="rating"
+                            name="rating" min="1" max="5" value="5">
+                    </p>
+
+                    <p>
+                        <label for="topic">Topic:</label>
+
+                        <select id="topic" name="topic">
+                            <option value="compliment">Compliment</option>
+                            <option value="complaint">Complaint</option>
+                            <option value="lost">Lost item</option>
+                            <option value="suggestion">Suggestion</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Message:</label><br>
+
+                        <textarea id="message" name="message"
+                            rows="5" cols="40" required></textarea>
+                    </p>
+
+                    <p>
+                        <label for="photo">Attach a Photo (optional):</label>
+                        <input type="file" id="photo" name="photo"
+                            accept="image/*">
+                    </p>
+
+                    <button type="submit">Send Feedback</button>
+
+                </fieldset>
+
+            </form>
+
+            <h3>Reach Us</h3>
+
+            <address>
+                MoveX Transportation App<br>
+                Baguio City, Philippines<br>
+                Phone:
+                <a href="tel:+639123456789">09123456789</a><br>
+                Email:
+                <a href="mailto:movex@example.com">movex@example.com</a>
+            </address>
+
+            <hr>
+        </section>
+
+
+        <!-- USEFUL LINKS -->
+        <section id="links">
+            <h2>Useful Links</h2>
+
+            <ul>
+                <li>
+                    <a href="https://www.openstreetmap.org"
+                        target="_blank">
+                        OpenStreetMap
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://maps.google.com"
+                        target="_blank">
+                        Google Maps
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.facebook.com"
+                        target="_blank">
+                        Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#top">Back to top</a>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- TERMS -->
+        <section id="terms-info">
+            <h2>Terms & Conditions</h2>
+
+            <details>
+                <summary>Read the terms</summary>
+
+                <ol>
+                    <li>Provide correct information when booking.</li>
+                    <li>Follow the driver's instructions.</li>
+                    <li>Respect the vehicle and other passengers.</li>
+                </ol>
+
+            </details>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 MoveX Transportation App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
